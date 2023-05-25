@@ -8,7 +8,7 @@ import {
   navLinkText,
   siteTitle,
 } from "./layout.module.css";
-import useSiteMetadata from "./hooks/useSiteMetadata";
+import useSiteMetadata from "../hooks/useSiteMetadata";
 
 const Layout = ({ pageTitle, children }) => {
   const siteMetadata = useSiteMetadata();
@@ -24,6 +24,11 @@ const Layout = ({ pageTitle, children }) => {
           </li>
           <li className={navLinkItem}>
             <Link to="/about">About</Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/blog" className={navLinkText}>
+              Blog
+            </Link>
           </li>
         </ul>
       </nav>
